@@ -1,8 +1,9 @@
 <mat-toolbar color="primary" class="navbar">
     <div>Fruit Shop</div>
-    <div>
-        <span>All</span>
-        <span>category 1</span>
-        <span>category 2</span>
+    <div class="navbar-links">
+        <li> <a href="/shop">All</a> </li>
+        <li *ngFor="let categories of categoriesList">
+            <a href="{{categories.category_url}}">{{categories.name}}</a>
+        </li>
     </div>
 </mat-toolbar>
