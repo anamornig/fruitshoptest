@@ -11,7 +11,8 @@ import { NavbarComponent } from './components/navbar/navbar.component';
 import { ProductListComponent } from './components/product-list/product-list.component';
 import { CardComponent } from './components/card/card.component';
 import { FooterComponent } from './components/footer/footer.component';
-
+import { SearchBarComponent } from './components/search-bar/search-bar.component';
+import {MatInputModule} from '@angular/material/input';
 
 @NgModule({
   declarations: [
@@ -19,14 +20,16 @@ import { FooterComponent } from './components/footer/footer.component';
     NavbarComponent,
     ProductListComponent,
     CardComponent,
-    FooterComponent
+    FooterComponent,
+    SearchBarComponent
   ],
   imports: [
     HttpClientModule,
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    MaterialModule
+    MaterialModule,
+    MatInputModule
     
   ],
   providers: [],
