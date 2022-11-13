@@ -1,5 +1,5 @@
 
-<!--
+
 <div class="cards-container">
     
     <mat-card class="new-card"  *ngFor="let products of productsList">
@@ -9,13 +9,20 @@
         <img mat-card-image src="https://material.angular.io/assets/img/examples/shiba2.jpg" alt="Photo of a Shiba Inu">
         <mat-card-content>product description</mat-card-content>
         <mat-card-actions align="end">
-            <button mat-raised-button> a {{products.price}}</button>
+            <button mat-raised-button> a {{details}}</button>
         </mat-card-actions>
     </mat-card>
     </div>
--->
+
+
+<!--
+
 <li *ngFor="let ids of productsIdList">
 <p>{{ids.price}}</p>
 </li>
 
 
+<div *ngFor="let producto of productoslong | async">
+    {{producto | json}}
+</div>
+-->

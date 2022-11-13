@@ -13,7 +13,6 @@ import { CardComponent } from './components/card/card.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { SearchBarComponent } from './components/search-bar/search-bar.component';
 import {MatInputModule} from '@angular/material/input';
-import { TrialDataComponent } from './components/trial-data/trial-data.component';
 
 @NgModule({
   declarations: [
@@ -22,8 +21,7 @@ import { TrialDataComponent } from './components/trial-data/trial-data.component
     ProductListComponent,
     CardComponent,
     FooterComponent,
-    SearchBarComponent,
-    TrialDataComponent
+    SearchBarComponent
   ],
   imports: [
     HttpClientModule,
