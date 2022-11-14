@@ -18,6 +18,9 @@ export class ProductsService {
   getDetails(data:any) {
     return this.httpClient.get(this.baseUrl, {params: data})
   }
+  getProductData(id: any): Observable<any> {
+    return this.httpClient.get(`${this.baseUrl}/${id}`)
+  }
 }
 
 
