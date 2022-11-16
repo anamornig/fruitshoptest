@@ -18,9 +18,21 @@ export class ProductsService {
   getDetails(data:any) {
     return this.httpClient.get(this.baseUrl, {params: data})
   }
+
   getProductData(id: any): Observable<any> {
     return this.httpClient.get(`${this.baseUrl}/${id}`)
   }
+
+
+
+
+  
+  getId(url: string) {
+    var idarray = url.split("/");
+    return parseInt(idarray[idarray.length-1]);
+  }
+
+
 }
 
 

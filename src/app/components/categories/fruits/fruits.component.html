@@ -1,0 +1,14 @@
+
+<p>wooorks</p>
+<div class="cards-container">
+    <mat-card class="new-card"  *ngFor="let productsByCategory of productsByCategoryList">
+        <mat-card-header>
+            <mat-card-title>{{productsByCategory.name}}</mat-card-title>
+        </mat-card-header>
+        <img mat-card-image src="https://api.predic8.de:443{{productsByCategory.product_url}}/photo">
+        <mat-card-content>product description {{productsByCategory.id}}</mat-card-content>
+        <mat-card-actions align="end">
+            <button mat-raised-button> a {{productsByCategory.product_url}}</button>
+        </mat-card-actions>
+    </mat-card>
+    </div>

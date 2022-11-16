@@ -1,0 +1,21 @@
+
+/* css for all the cards */
+
+
+
+.cards-container{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+    gap:10px;
+    margin: 30px;
+
+}
+
+.new-card{
+    flex-basis: 300px;
+}
+
