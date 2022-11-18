@@ -25,15 +25,3 @@ const routes: Routes = [
   exports: [RouterModule]
 })
 export class AppRoutingModule { }
-
-
-/* casi
-
-    children: [
-      { path: 'shop/categories/dried', component: DriedComponent },
-      { path: 'shop/categories/exotic', component: ExoticComponent },
-      { path: 'shop/categories/fresh', component: FreshComponent },
-      { path: 'shop/categories/fruits', component: FruitsComponent },
-      { path: 'shop/categories/nuts', component: NutsComponent },
-    ]
-   */

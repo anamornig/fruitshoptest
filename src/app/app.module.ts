@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+import { NgModule, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { HttpClientModule } from '@angular/common/http';
 
@@ -20,7 +20,6 @@ import { FreshComponent } from './components/categories/fresh/fresh.component';
 import { ExoticComponent } from './components/categories/exotic/exotic.component';
 import { NutsComponent } from './components/categories/nuts/nuts.component';
 import { CategoryComponent } from './components/category/category.component';
-import { CategoryDetailComponent } from './components/category-detail/category-detail.component';
 
 @NgModule({
   declarations: [
@@ -36,8 +35,7 @@ import { CategoryDetailComponent } from './components/category-detail/category-d
     FreshComponent,
     ExoticComponent,
     NutsComponent,
-    CategoryComponent,
-    CategoryDetailComponent
+    CategoryComponent
   ],
   imports: [
     HttpClientModule,
@@ -49,6 +47,9 @@ import { CategoryDetailComponent } from './components/category-detail/category-d
     
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+  schemas: [
+    CUSTOM_ELEMENTS_SCHEMA
+  ]
 })
 export class AppModule { }

@@ -3,6 +3,7 @@ import { AllDataService } from 'src/app/services/all-data.service';
 
 
 
+
 @Component({
   selector: 'app-navbar',
   templateUrl: './navbar.component.html',

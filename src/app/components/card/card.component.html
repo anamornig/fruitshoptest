@@ -2,27 +2,16 @@
 
 <div class="cards-container">
     
-    <mat-card class="new-card"  *ngFor="let products of productsList">
+    <mat-card class="new-card"  *ngFor="let products of products">
         <mat-card-header>
             <mat-card-title>{{products.name}}</mat-card-title>
         </mat-card-header>
-        <img mat-card-image src="https://api.predic8.de:443{{products.product_url}}/photo">
-        <mat-card-content>product description {{products.id}}</mat-card-content>
+        <img mat-card-image src="{{products.photo_url}}">
+        <mat-card-content>product description {{products}}</mat-card-content>
         <mat-card-actions align="end">
-            <button mat-raised-button> a {{products.product_url}}</button>
+            <button mat-raised-button> a {{products.price}}</button>
         </mat-card-actions>
     </mat-card>
     </div>
 
 
-<!--
-
-<li *ngFor="let ids of productsIdList">
-<p>{{ids.price}}</p>
-</li>
-
-
-<div *ngFor="let producto of productoslong | async">
-    {{producto | json}}
-</div>
--->
