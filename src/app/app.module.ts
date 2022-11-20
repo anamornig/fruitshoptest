@@ -1,7 +1,8 @@
 import { NgModule, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { HttpClientModule } from '@angular/common/http';
-
+import { FormsModule } from '@angular/forms';
+import { Ng2SearchPipeModule } from 'ng2-search-filter';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -12,7 +13,7 @@ import { ProductListComponent } from './components/product-list/product-list.com
 import { CardComponent } from './components/card/card.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { SearchBarComponent } from './components/search-bar/search-bar.component';
-import {MatInputModule} from '@angular/material/input';
+import { MatInputModule } from '@angular/material/input';
 import { HomeComponent } from './components/home/home.component';
 import { FruitsComponent } from './components/categories/fruits/fruits.component';
 import { DriedComponent } from './components/categories/dried/dried.component';
@@ -35,7 +36,7 @@ import { CategoryComponent } from './components/category/category.component';
     FreshComponent,
     ExoticComponent,
     NutsComponent,
-    CategoryComponent
+    CategoryComponent,
   ],
   imports: [
     HttpClientModule,
@@ -43,7 +44,9 @@ import { CategoryComponent } from './components/category/category.component';
     AppRoutingModule,
     BrowserAnimationsModule,
     MaterialModule,
-    MatInputModule
+    MatInputModule,
+    FormsModule,
+    Ng2SearchPipeModule
     
   ],
   providers: [],

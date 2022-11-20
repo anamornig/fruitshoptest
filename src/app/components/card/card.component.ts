@@ -1,8 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ProductsService } from 'src/app/services/products.service';
-import { HttpClient, HttpParams } from '@angular/common/http';
-import { Observable, Subscription } from 'rxjs';
-import { Product } from 'src/app/interfaces/product';
+import { HttpClient } from '@angular/common/http';
 
 
 @Component({
@@ -13,6 +11,7 @@ import { Product } from 'src/app/interfaces/product';
 
 export class CardComponent implements OnInit {
   productsList: any;
+term: any;
   constructor(private productsService: ProductsService, private httpClient: HttpClient) { }
 
   
@@ -21,7 +20,11 @@ export class CardComponent implements OnInit {
     this.productsService.getDataTotal().subscribe((data)=>{
       this.productsList = data.products;
     })
-} 
+  } 
+
+  searchText: string = '';
+
+
 }
 
 
@@ -35,5 +38,12 @@ export class CardComponent implements OnInit {
           this.productsList.push(productDetail)
         }) 
       }this.productsList = products.products;
-    }) 
-} */
+    })
+}
+
+
+  onSearchTextEntered(searchValue: string){
+    this.searchText = searchValue;
+    console.log(this.searchText);
+  }
+*/

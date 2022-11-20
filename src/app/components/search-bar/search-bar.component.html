@@ -1,8 +1,20 @@
-<mat-form-field class="example-form-field" appearance="fill">
+
+
+<form class="example-form">
+  <mat-form-field class="example-full-width">
     <mat-label>Search</mat-label>
-    <input matInput type="text" >
-    <button class="button-right">
-      <mat-icon>search</mat-icon>
-    </button>
+    <input type="text" matInput placeholder="Search a product" [(ngModel)]="term">
+    <mat-icon matSuffix>search</mat-icon>
   </mat-form-field>
-  
+</form>
+
+<!--
+<form class="example-form">
+  <mat-form-field class="example-full-width">
+    <mat-label>Search</mat-label>
+    <input type="text" matInput placeholder="Search a product" [(ngModel)]="enteredSearchValue" (input)="onSearchTextChanged()">
+    <mat-icon matSuffix>search</mat-icon>
+  </mat-form-field>
+</form>
+
+-->
