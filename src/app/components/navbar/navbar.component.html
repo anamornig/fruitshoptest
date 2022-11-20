@@ -3,7 +3,7 @@
     <div class="navbar-links">
         <li> <a href="/shop">All</a> </li>
         <li *ngFor="let categories of categoriesList">
-            <a href="{{categories.category_url}}">{{categories.name}}</a>
+            <a href="{{categories.category_url | lowercase}}">{{categories.name}}</a>
         </li>
     </div>
 </mat-toolbar>

@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { AllDataService } from 'src/app/services/all-data.service';
-
+import { ProductsService } from 'src/app/services/products.service'
+import { HttpClient } from '@angular/common/http';
 
 
 
@@ -11,11 +11,11 @@ import { AllDataService } from 'src/app/services/all-data.service';
 })
 export class NavbarComponent implements OnInit {
   categoriesList: any;
-  constructor(private allDataService: AllDataService) { }
+  constructor(private productsService:ProductsService, private httpClient: HttpClient) { }
   
 
   ngOnInit(): void {
-    this.allDataService.getData().subscribe((data) =>{
+    this.productsService.getCategories().subscribe((data) =>{
       this.categoriesList= data.categories;
     })
   }

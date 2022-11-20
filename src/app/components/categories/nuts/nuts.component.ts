@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { ProductsService } from 'src/app/services/products.service';
+import { HttpClient } from '@angular/common/http';
 
 @Component({
   selector: 'app-nuts',
@@ -7,9 +9,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class NutsComponent implements OnInit {
 
-  constructor() { }
-
+  constructor(private productsService: ProductsService, private httpClient: HttpClient) { }
+  nutsList:any;
+  
   ngOnInit(): void {
+    this.productsService.getCategoryNuts().subscribe((data) => {
+      this.nutsList = data.products
+    })
   }
-
 }

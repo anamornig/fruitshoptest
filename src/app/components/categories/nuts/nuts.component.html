@@ -1,1 +1,13 @@
-<p>nuts works!</p>
+
+<div class="cards-container">
+    <mat-card class="new-card"  *ngFor="let products of nutsList">
+        <mat-card-header>
+            <mat-card-title>{{products.name}}</mat-card-title>
+        </mat-card-header>
+        <img mat-card-image src="https://api.predic8.de:443{{products.product_url}}/photo">
+        <mat-card-content>product description </mat-card-content>
+        <mat-card-actions align="end">
+            <button mat-raised-button> a {{products.price}}</button>
+        </mat-card-actions>
+    </mat-card>
+    </div>

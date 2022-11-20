@@ -1,17 +1,20 @@
 
-
 <div class="cards-container">
     
-    <mat-card class="new-card"  *ngFor="let products of products">
+    <mat-card class="new-card"  *ngFor="let products of productsList">
         <mat-card-header>
             <mat-card-title>{{products.name}}</mat-card-title>
         </mat-card-header>
-        <img mat-card-image src="{{products.photo_url}}">
-        <mat-card-content>product description {{products}}</mat-card-content>
+        <img mat-card-image src="https://api.predic8.de:443{{products.product_url}}/photo">
+        <mat-card-content>product description </mat-card-content>
         <mat-card-actions align="end">
-            <button mat-raised-button> a {{products.price}}</button>
+            <button mat-raised-button> a {{products.product_url}}</button>
         </mat-card-actions>
     </mat-card>
     </div>
+<!---
+    {"get":{"summary":"Get a product by id","operationId":"getProductsId","parameters":[{"type":"integer","description":"Id of a product","name":"id","in":"path","required":true}],"tags":["products"],"responses":{"200":{"description":"Product description","schema":
 
+    {"get":{"summary":"Lists all the products","operationId":"getProducts","tags":["products"],"responses":{"200":{"description":"Collection of products","schema":{"$ref":"#/definitions/ProductList"}}}}
 
+-->

@@ -8,13 +8,13 @@ import { HttpClient } from '@angular/common/http';
   styleUrls: ['./fruits.component.css']
 })
 export class FruitsComponent implements OnInit {
-  productsByCategoryList: any;
+  fruitsList: any;
 
   constructor(private productsService: ProductsService, private httpClient: HttpClient) { }
 
   ngOnInit(): void {
-    this.productsService.getCategory().subscribe((data) => {
-      this.productsByCategoryList = data.productsByCategory;
+    this.productsService.getCategoryFruit().subscribe((data) => {
+      this.fruitsList = data.products
     })
   }
 }

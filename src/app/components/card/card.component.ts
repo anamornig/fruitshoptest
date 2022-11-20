@@ -13,16 +13,19 @@ import { Product } from 'src/app/interfaces/product';
 
 export class CardComponent implements OnInit {
   productsList: any;
-  productsIdList: any;
-  public baseUrl = "https://api.predic8.de:443/shop/products/";
-  products!: Array<Product>;
-  page = '1';
-
   constructor(private productsService: ProductsService, private httpClient: HttpClient) { }
 
   
 
   ngOnInit(): void {
+    this.productsService.getDataTotal().subscribe((data)=>{
+      this.productsList = data.products;
+    })
+} 
+}
+
+
+/*
     this.productsList = null; 
     this.productsService.getProductData('').subscribe((products) => {
       for (let product in products) {
@@ -33,5 +36,4 @@ export class CardComponent implements OnInit {
         }) 
       }this.productsList = products.products;
     }) 
-}
-}
+} */
