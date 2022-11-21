@@ -17,7 +17,7 @@ export class ProductsService {
     return this.httpClient.get<any>(this.baseUrl+'products/',{params: end})
   }
 
-  /* idea of getting products by id, to get the rest of the data */
+  /* idea of getting products by id, to get the rest of the data 
   getProductData(id: any): Observable<any> {
     return this.httpClient.get(`${this.baseUrl}/${id}`)
   }
@@ -26,10 +26,11 @@ export class ProductsService {
     var idarray = url.split("/");
     return parseInt(idarray[idarray.length-1]);
   }
-
+  */
   getCategories(): Observable<any>{
     return this.httpClient.get(this.baseUrl+'categories/')
   }
+
 /* get products by category */
   getCategoryDried() {
     return this.httpClient.get<any>(this.baseUrl+'categories/dried')

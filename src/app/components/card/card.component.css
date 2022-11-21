@@ -19,3 +19,8 @@
     flex-basis: 300px;
 }
 
+#search-bar{
+    margin: auto;
+    width: 50%;
+    padding: 10px;
+}
