@@ -1,7 +1,7 @@
 import { NgModule, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { HttpClientModule } from '@angular/common/http';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { Ng2SearchPipeModule } from 'ng2-search-filter';
 
 import { AppRoutingModule } from './app-routing.module';
@@ -39,6 +39,7 @@ import { NutsComponent } from './components/categories/nuts/nuts.component';
     MaterialModule,
     MatInputModule,
     FormsModule,
+    ReactiveFormsModule,
     Ng2SearchPipeModule
     
   ],

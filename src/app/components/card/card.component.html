@@ -2,8 +2,13 @@
 <form class="example-form" id="search-bar">
     <mat-form-field class="example-full-width">
         <mat-label>Search</mat-label>
-        <input type="text" matInput placeholder="Search a product" name="tag" [(ngModel)]="term">
+        <input type="text" [formControl]="myControl" matInput placeholder="Search a product" [matAutocomplete]="auto" name="tag" [(ngModel)]="term">
         <mat-icon matSuffix>search</mat-icon>
+        <mat-autocomplete autoActiveFirstOption #auto="matAutocomplete">
+            <mat-option *ngFor="let option of filteredOptions |async " [value]="option.name">
+                {{option.name}}
+            </mat-option>
+        </mat-autocomplete>
     </mat-form-field>
 </form>
 
@@ -19,7 +24,3 @@
             </mat-card-actions>
     </mat-card>
     </div>
-<!-- <app-search-bar (searchTextChanged)="onSearchTextEntered($event)"></app-search-bar>
-            <div *ngIf="searchText ==='' || products.name.toLowerCase().includes(searchText)">
-
--->
