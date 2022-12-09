@@ -57,17 +57,6 @@ export class CardComponent implements OnInit {
 
 /*
 
-    this.productsList = this.myControl.valueChanges.pipe(
-      startWith(''),
-      map(value => this._filter(value || '')),
-    );
-
-  private _filter(value: string): string[] {
-    const filterValue = value.toLowerCase();
-
-    return this.productsList.filter((product: string) => product.toLowerCase().includes(filterValue));
-  }
-
 
     this.productsList = null; 
     this.productsService.getProductData('').subscribe((products) => {
@@ -81,15 +70,4 @@ export class CardComponent implements OnInit {
     })
 }
 
-
-    this.filteredProducts = this.myControl.valueChanges.pipe(
-      startWith(''),
-      map(value => this._filter(value || '')),
-    );
-
-  private _filter(value: string): string[] {
-    const filterValue = value.toLowerCase();
-
-    return this.productsNames.filter((productsNames: string) => productsNames.toLowerCase().includes(filterValue));
-  }
 */

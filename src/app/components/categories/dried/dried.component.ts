@@ -12,7 +12,7 @@ export class DriedComponent implements OnInit {
   constructor(private productsService: ProductsService, private httpClient: HttpClient) { }
 
   ngOnInit(): void {
-    this.productsService.getCategoryFruit().subscribe((data) => {
+    this.productsService.getCategoryDried().subscribe((data) => {
       this.driedList = data.products
     })
   }
